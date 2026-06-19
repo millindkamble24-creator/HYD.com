@@ -4,6 +4,11 @@ marign:auto;
 padding:20px;
 }
 
+.product-link{
+text-decoration:none;
+color:inherit;
+}
+
 /* Mobile First */
 .products-grid{
 display:grid;

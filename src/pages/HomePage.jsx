@@ -4,6 +4,7 @@ import blackCottontshirt  from '../assets/images/ChrisCrossBlackCottonT-Shirt.we
 import redTshirt from '../assets/images/printedredtshirt.webp'
 import whiteTshirt from '../assets/images/whitetshirt.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom';
 
 export function HomePage(){
     const products=[
@@ -17,9 +18,13 @@ export function HomePage(){
         <div className="home-page">
             <div className="products-grid">
                 {products.map((product)=>(
-                    <div key={product.id} className="product-card">
+                    <Link key={product.id} to={'/product/${product.id}'}
+                    className="product-link"
+                    >
+                    <div className="product-card">
                         <div className="product-image-container">
-                            <img src={product.image}
+                            <img
+                            src={product.image}
                             alt={product.name}
                             className="product-image"
                             />
@@ -29,6 +34,7 @@ export function HomePage(){
                             <p className="price">{product.price}</p>
                         </div>
                     </div>
+                    </Link>
                     ))}
             </div>
         </div>

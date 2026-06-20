@@ -1,4 +1,6 @@
 import '../pages/header.css';
+import { useParams } from "react-router-dom";
+
 export function Header(){
     return(
         <header className="header">

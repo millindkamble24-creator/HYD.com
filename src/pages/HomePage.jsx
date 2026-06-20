@@ -8,17 +8,18 @@ import {Link} from 'react-router-dom';
 
 export function HomePage(){
     const products=[
-        {id:1, image:brownTshirt, name:'Brown T-shirt',price:299},
-        {id:2, image:blackCottontshirt, name:'Black T-shirt', price:399},
-        {id:3, image:redTshirt, name:'Red T-shirt', price:349},
-        {id:4, image:whiteTshirt, name:'white T-shirt', price:499}
+        {id:1, image:brownTshirt, name:'Brown-T-shirt',price:299},
+        {id:2, image:blackCottontshirt, name:'Black-T-shirt', price:399},
+        {id:3, image:redTshirt, name:'Red-T-shirt', price:349},
+        {id:4, image:whiteTshirt, name:'white-T-shirt', price:499}
         ];
 
     return(
         <div className="home-page">
             <div className="products-grid">
                 {products.map((product)=>(
-                    <Link key={product.id} to={'/product/${product.id}'}
+                    <Link key={product.name}
+                    to={`/product/${product.name}`}
                     className="product-link"
                     >
                     <div className="product-card">
